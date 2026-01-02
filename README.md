@@ -188,9 +188,11 @@ pytest order_agent_test.py -v
 
 ```
 agent/
-├── order_agent.py          # 第一阶段：ReAct Agent 实现
-├── order_agent_test.py     # 测试文件
-├── requirements.txt        # 依赖
+├── 01_build_agent_from_scratch/    # 从零实现 Agent
+│   ├── order_agent.py
+│   └── order_agent_test.py
+├── 02_tool_calling_fc/             # 工具调用：Function Calling（待添加）
+├── requirements.txt
 ├── README.md
 └── LICENSE
 ```
