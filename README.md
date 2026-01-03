@@ -78,21 +78,9 @@ Answer: 您的订单：汉堡x2=50元，可乐x1=8元，总计58元
 
 ---
 
-## 📚 第二阶段：Function Calling（计划中）
+## 📚 第二阶段：Function Calling
 
-> 从手动解析升级为 LLM 原生工具调用
-
-### 对比
-
-| 方式             | 工具调用                      | 优点         | 缺点         |
-| ---------------- | ----------------------------- | ------------ | ------------ |
-| ReAct            | 正则解析 `[Call: tool: args]` | 简单直观     | 解析不稳定   |
-| Function Calling | LLM 原生 JSON                 | 结构化、可靠 | 依赖模型支持 |
-
-### 计划内容
-- [ ] OpenAI Function Calling
-- [ ] Claude Tool Use
-- [ ] 对比两种实现方式
+具体见简书上的文章：[Agent工具调用：从正则解析到Function Calling](https://www.jianshu.com/p/56fea75a3139)
 
 ---
 
