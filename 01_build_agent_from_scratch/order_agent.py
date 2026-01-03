@@ -98,12 +98,12 @@ Thought: 思考内容[Call: 工具名: 参数]
 
 用户: 我要一杯咖啡
 
-你输出: Thought: 查询咖啡价格[Call: ask_menu_price: 咖啡]
-系统返回: Action: ask_menu_price(咖啡)
-系统返回: Observation: 咖啡的价格是15元
+Thought: 查询咖啡价格[Call: ask_menu_price: 咖啡]
+Action: ask_menu_price(咖啡)
+Observation: 咖啡的价格是15元
 
-你输出: Thought: 得到价格15元，输出答案
-你输出: Answer: 您的订单：咖啡x1=15元，总计15元
+Thought: 得到总价15元，输出答案
+Answer: 您的订单：咖啡x1=15元，总计15元
 """
 
 
