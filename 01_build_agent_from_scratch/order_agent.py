@@ -26,8 +26,6 @@ MENU = {
     "奶茶": 10,
 }
 
-
-# ==================== 工具函数 ====================
 def ask_menu_price(item_name: str) -> str:
     """查询菜品价格"""
     item_name = item_name.strip()
@@ -81,43 +79,32 @@ class Agent:
         return response.json()["choices"][0]["message"]["content"]
 
 
-# ==================== Prompt 模板 ====================
 PROMPT = """
 你是一个智能点餐助手，负责帮助顾客完成点餐并计算总价。
 
-## 流程说明（每轮只输出一行）
-- **Thought**：思考 + 工具调用，格式：Thought: 思考内容[Call: 工具名: 参数]
-- **Action**：系统自动执行工具（你不需要输出）
-- **Observation**：工具返回结果（系统提供给你）
+## 重要规则
+1. 每次回复只输出一行 Thought（包含一个工具调用），然后停止
+2. 等待系统返回 Observation 后，再输出下一行 Thought
+3. 完成后输出 Thought + Answer
 
 ## 可用工具
-1. ask_menu_price: 查询菜品价格，参数为菜品名称
-2. calculate: 计算数学表达式，参数为表达式
+1. ask_menu_price: 查询单个菜品价格，如 [Call: ask_menu_price: 咖啡]
+2. calculate: 计算总价，如 [Call: calculate: 10*1 + 8*2]
 
-## 重要规则
-- 每次只输出一行 Thought，工具调用放在末尾用方括号括起来[Call: 工具名: 参数]
-- 等待 Observation 返回后再继续下一轮
-- 完成后输出 Answer
+## 输出格式
+Thought: 思考内容[Call: 工具名: 参数]
 
 ## 会话示例
 
-用户: 我要2份汉堡和1杯可乐
+用户: 我要一杯咖啡
 
-Thought: 用户想要点2份汉堡和1杯可乐，我需要先查询汉堡的单价[Call: ask_menu_price: 汉堡]
-Action: ask_menu_price(汉堡)
-Observation: 汉堡的价格是25元
+你输出: Thought: 查询咖啡价格[Call: ask_menu_price: 咖啡]
+系统返回: Action: ask_menu_price(咖啡)
+系统返回: Observation: 咖啡的价格是15元
 
-Thought: 已知汉堡25元，还需要查询可乐价格[Call: ask_menu_price: 可乐]
-Action: ask_menu_price(可乐)
-Observation: 可乐的价格是8元
-
-Thought: 汉堡25元，可乐8元，现在计算总价[Call: calculate: 25*2 + 8*1]
-Action: calculate(25*2 + 8*1)
-Observation: 58元
-
-Thought: 已经得到总价58元，可以输出最终答案了。
-Answer: 您的订单：汉堡x2=50元，可乐x1=8元，总计58元。感谢您的点餐！
-""".strip()
+你输出: Thought: 得到价格15元，输出答案
+你输出: Answer: 您的订单：咖啡x1=15元，总计15元
+"""
 
 
 # ==================== 主查询函数 ====================
