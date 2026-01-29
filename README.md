@@ -14,8 +14,10 @@
 |   2   | **Function Calling**   | 进阶篇 | ✅ 已完成 | [Agent工具调用：从正则解析到Function Calling](https://www.jianshu.com/p/56fea75a3139) |
 |   3   | **MCP**                | 协议篇 | ✅ 已完成 | [这就是MCP](https://www.jianshu.com/p/d92bd84d4c45)                                   |
 |   4   | **Agent Concept**      | 概念篇 | ✅ 已完成 | [Agent到底什么](https://www.jianshu.com/p/3c7d0f3d1be7)                               |
-|   5   | **Agent Skill**        | 协作篇 | 🚧 进行中 | --                                                                                    |
-|   6   | **A2A**                | 协作篇 | ⏳ 待开始 | --                                                                                    |
-|   7   | **Agent Framework**    | 框架篇 | ⏳ 待开始 | --                                                                                    |
-|   8   | **Multi-Agent System** | 系统篇 | ⏳ 待开始 | --                                                                                    |
+|   5   | **xDD**                | 协作篇 | ✅ 已完成 | [AI时代xDD的正确打开方式](https://www.jianshu.com/p/f6a5087cd13f)                     |
+|   6   | **Hidden Cost**        | 进阶篇 | ✅ 已完成 | [AI编程的隐性代价](https://www.jianshu.com/p/9306814e83a5)--                          |
+|   7   | **Agent Skill**        | 进阶篇 | 🚧 进行中 | --                                                                                    |
+|   8   | **A2A**                | 协作篇 | 🚧 进行中 | --                                                                                    |
+|   9   | **Agent Framework**    | 框架篇 | ⏳ 待开始 | --                                                                                    |
+|  10   | **Multi-Agent System** | 系统篇 | ⏳ 待开始 | --                                                                                    |
 
